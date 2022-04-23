@@ -6,6 +6,10 @@ class Manager extends Employee {
     get bonuses () {
         return Util.formatCurrency(this.#bonuses)
     }
+
+    get netPay() {
+        //netPay + bounuses
+    }
 }
 
 module.exports = Manager
