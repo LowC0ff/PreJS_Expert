@@ -32,6 +32,16 @@ Date.prototype.getFullYear = () => CURRENT_YEAR
     assert.deepStrictEqual(employee.grossPay, Util.formatCurrency(5000.40))
     assert.deepStrictEqual(employee.netPay, Util.formatCurrency(4.000,32))
 
-    const expectedBirtYear = 2001
+    const expectedBirthYear = 2001
     assert.deepStrictEqual(employee.birthYear, expectedBirthYear)
+
+
+    //não tem set, não vai mudar!!! orientação a objetos
+    employee.birthYear = newDate().getFullYear() - 80
+    assert.deepStrictEqual(employee.birthYear, new Date().getFullYear() - 80)
+
+
+    //deu certo porque o age tem set
+    employee.age = 80
+    assert.deepStrictEqual(employee.BirthYear, 1941)
 }
