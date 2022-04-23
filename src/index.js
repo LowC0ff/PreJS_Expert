@@ -13,8 +13,11 @@ const GENDER = {
         genbder: GENDER.female
     })
 
-    assert.throws(() => employee.birtYear, { message: 'you must define age first!!'})
+    assert.throws(() => employee.birthYear, { message: 'you must define age first!!'})
 }
+
+const CURRENT_YEAR = 2021
+Date.prototype.getFullYear = () => CURRENT_YEAR
 
 {
     const employee = new Employee({
@@ -27,5 +30,8 @@ const GENDER = {
     assert.deepStrictEqual(employee.age, undefined)
     assert.deepStrictEqual(employee.gender, undefined)
     assert.deepStrictEqual(employee.grossPay, Util.formatCurrency(5000.40))
-    assert.deepStrictEqual(employee.netPay, 0)
+    assert.deepStrictEqual(employee.netPay, Util.formatCurrency(4.000,32))
+
+    const expectedBirtYear = 2001
+    assert.deepStrictEqual(employee.birthYear, expectedBirthYear)
 }
