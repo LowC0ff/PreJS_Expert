@@ -10,7 +10,7 @@ const GENDER = {
 
 {
     const employee = new Employee({
-        name: 'teste da silva',
+        name: 'name',
         genbder: GENDER.female
     })
 
@@ -22,12 +22,12 @@ Date.prototype.getFullYear = () => CURRENT_YEAR
 
 {
     const employee = new Employee({
-        name: 'Testezinho',
+        name: 'YouName',
         age: 20,
         gender: GENDER.male
     })
 
-    assert.deepStrictEqual(employee.name, "Mr. Testezinho")
+    assert.deepStrictEqual(employee.name, "Mr. name")
     assert.deepStrictEqual(employee.age, undefined)
     assert.deepStrictEqual(employee.gender, undefined)
     assert.deepStrictEqual(employee.grossPay, Util.formatCurrency(5000.40))
@@ -49,11 +49,11 @@ Date.prototype.getFullYear = () => CURRENT_YEAR
 
 {
     const manager = new Manager({
-        name: 'testezuda',
+        name: 'SraName',
         age: 18,
         gender: GENDER.female
     })
-    assert.deepStrictEqual(manager.name, "Ms. Testezuda")
+    assert.deepStrictEqual(manager.name, "Ms. Name")
     assert.deepStrictEqual(manager.age, undefined)
     assert.deepStrictEqual(manager.gender, undefined)
     assert.deepStrictEqual(manager.BirthYear, 2003)
