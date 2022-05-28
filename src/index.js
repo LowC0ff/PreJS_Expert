@@ -53,7 +53,7 @@ Date.prototype.getFullYear = () => CURRENT_YEAR
         age: 18,
         gender: GENDER.female
     })
-    assert.deepStrictEqual(manager.name, "Ms. Name")
+    assert.deepStrictEqual(manager.name, "Ms. Name is teste")
     assert.deepStrictEqual(manager.age, undefined)
     assert.deepStrictEqual(manager.gender, undefined)
     assert.deepStrictEqual(manager.BirthYear, 2003)
